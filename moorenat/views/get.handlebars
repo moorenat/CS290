@@ -1,5 +1,9 @@
 <h1>Get Request Received</h1>
-
+<ul>
+    {{#each param}}
+    <li>{{this.name}}: {{this.value}}</li>
+    {{/each}}
+</ul>
 <table id="gettable"></table>
 <th>Parameter:value</th>
 <tr>
