@@ -9,10 +9,15 @@
     </tr>
 </table>
 <table id="querytable">
-    <th>Query String</th>
     <tr>
-        {{#each dataList}}
-        <td>{{this.name}}:{this.value}}</td>
-        {{/each}}
+        <th>Query String</th>
     </tr>
+
+
+    {{#each dataList}}
+    <tr>
+        <td> {{this.name}}: {{this.value}}</td>
+    </tr>
+    {{/each}}
+
 </table>
