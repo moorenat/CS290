@@ -3,7 +3,7 @@
 <table id="posttable">
     <th>Parameter:value</th>
     <tr>
-        {{#each param}}
+        {{#each dataList}}
         <td>{{this.name}}: {{this.value}}</td>
         {{/each}}
     </tr>
@@ -11,8 +11,8 @@
 <table id="querytable">
     <th>Query String</th>
     <tr>
-        {{#each query}}
-        <td>{{this.query}}</td>
+        {{#each dataList}}
+        <td>{{this.name}}:{this.value}}</td>
         {{/each}}
     </tr>
 </table>

@@ -1,13 +1,13 @@
 <h1>Get Request Received</h1>
 <ul>
-    {{#each param}}
+    {{#each dataList}}
     <li>{{this.name}}: {{this.value}}</li>
     {{/each}}
 </ul>
 <table id="gettable"></table>
 <th>Parameter:value</th>
 <tr>
-    {{#each param}}
+    {{#each dataList}
     <td>{{this.name}}: {{this.value}}</td>
     {{/each}}
 </tr>
