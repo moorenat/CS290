@@ -7,6 +7,10 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 62650);
 
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //used lecture on server side form handling as template for app.get and app.post routes. https://canvas.oregonstate.edu/courses/1798808/pages/server-side-form-handling?module_item_id=20387905
 app.get('/', function (req, res) {
@@ -19,10 +23,7 @@ app.get('/', function (req, res) {
     res.render('get', context);
 });
 
-var bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 app.post('/', function (req, res) {
     var qParams = [];
