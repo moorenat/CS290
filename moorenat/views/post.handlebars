@@ -1,0 +1,18 @@
+<h1>POST Request Received</h1>
+
+<table id="posttable">
+    <th>Parameter:value</th>
+    <tr>
+        {{#each param}}
+        <td>{{this.name}}: {{this.value}}</td>
+        {{/each}}
+    </tr>
+</table>
+<table id="querytable">
+    <th>Query String</th>
+    <tr>
+        {{#each query}}
+        <td>{{this.query}}</td>
+        {{/each}}
+    </tr>
+</table>
